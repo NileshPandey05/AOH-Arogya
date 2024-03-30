@@ -103,14 +103,22 @@ const Navbar = () => {
                           Video Call
                         </a>
                       </li>
-                      {/* <li>
+                      <li>
                         <Link
-                          to="/ChatBot"
+                          to="/Precription"
                           className="block px-4 py-2 hover:bg-gray-100"
                         >
-                          Chat Bot
+                          Precription
                         </Link>
-                      </li> */}
+                      </li>
+                      <li>
+                        <Link
+                          to="/Search"
+                          className="block px-4 py-2 hover:bg-gray-100"
+                        >
+                          Search
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 )}

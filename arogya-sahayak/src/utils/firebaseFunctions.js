@@ -81,7 +81,7 @@ export const uploadImage = (imageUplaod) => {
 
 export const saveRegisteredData = async (imageUplaod, userInfo) => {
   try {
-    const docRef = doc(collection(firestore, "patients/"), `${user.uid}`);
+    const docRef = doc(collection(firestore, "patients/"), `${user.phoneNumber?user.phoneNumber:userInfo.phone}`);
     const result = await setDoc(docRef, userInfo);
     uploadImage(imageUplaod, userInfo);
     console.log("result", result);
@@ -215,19 +215,3 @@ export const getAvailableSlots = async (id) => {
   }
 };
 
-
-export const prescriptionUpload = async (imageUplaod, phoneNumber) => {
-  try {
-    if (imageUplaod.length === 0) return;
-
-    imageUplaod.map(async (imageItem) => {
-      console.log(imageItem);
-      const imageRef = ref(storage,`${phoneNumber}/${imageItem.filename}`);
-      await uploadBytes(imageRef, imageItem.file).then((response) => {
-        console.log(response);
-      });
-    });
-  } catch (e) {
-    console.error("Error saving Files", e);
-  }
-};

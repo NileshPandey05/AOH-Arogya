@@ -92,7 +92,7 @@ const Home = () => {
         </div>
         <div>
           
-      <Contact/>
+      
         </div>
       </section>
       <Reviews/>
