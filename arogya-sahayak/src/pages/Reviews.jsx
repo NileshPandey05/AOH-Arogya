@@ -8,12 +8,7 @@ import cta from   '../images/cta_img.webp';
 // import { useState } from 'react';
 
 const Reviews = () => {
-  // function Click() {
-
-  // const[ showtext , setshowtext ] = useState (false);
-
-  // }
-
+  
   return (
     <div>
     <div className=" mt-6 ml-8">
@@ -36,25 +31,6 @@ const Reviews = () => {
           </div>
           <div className=" h-2 w-2 bg-blue-800  -mt-8 ml-[546px] rounded-full"></div>
 
-          {/* <div>
-            <img src={quote}
-              className=" ml-[450px] -mt-[120px] w-10 h-10 "></img>
-            <p className="  text-start ml-[520px] text-sm  font-thin -mt-2 ">
-              {" "}
-              I recently had to bring my child to Arogya Sahayak for a minor injury,
-              and I was so impressed with the care he received. The pediatrician
-              was great with him and made him feel at ease, and the entire staff
-              was kind and attentive.
-          </p>
-
-            <div className=" ml-[520px] mt-6 flex flex-row gap-1 text-blue-500">
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStarHalfStroke />
-            </div>
-          </div> */}
         </div>
 
         <div className=" mt-20 ml-28">
