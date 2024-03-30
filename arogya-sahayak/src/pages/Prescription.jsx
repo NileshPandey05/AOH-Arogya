@@ -18,7 +18,7 @@ import {
 } from "firebase/firestore";
 import { firestore } from "../firebase.config";
 import { useState } from "react";
-import { prescriptionUpload, uploadImage } from "../utils/firebaseFunctions";
+import { fetchPatientData, prescriptionUpload, uploadImage } from "../utils/firebaseFunctions";
 
 const Prescription = () => {
   const [{ user }, dispatch] = useStateValue();
@@ -53,8 +53,10 @@ const Prescription = () => {
 
   const writeData = async (e) => {
     e.preventDefault();
+    let data = await fetchPatientData(arogya);
+    console.log(data.id)
 
-    prescriptionUpload(imageUplaod,arogya);
+    prescriptionUpload(imageUplaod,data.id);
   };
 
   if (isDoctor === false) {
