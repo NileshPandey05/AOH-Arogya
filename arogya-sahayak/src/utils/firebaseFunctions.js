@@ -83,7 +83,7 @@ export const uploadImage = (imageUplaod) => {
 
 export const saveRegisteredData = async (imageUplaod, userInfo) => {
   try {
-    const docRef = doc(collection(firestore, "patients/"), `${user.uid}`);
+    const docRef = doc(collection(firestore, "patients/"), `${user.phoneNumber?user.phoneNumber:userInfo.phone}`);
     const result = await setDoc(docRef, userInfo);
     uploadImage(imageUplaod, userInfo);
     console.log("result", result);
