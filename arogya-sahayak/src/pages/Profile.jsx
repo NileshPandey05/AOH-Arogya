@@ -49,15 +49,15 @@ const Profile = () => {
     console.log(data);
   }, [data]);
 
-  if (user === null) {
-    return (
-      <div>
-        <Link>
-          <Signup></Signup>
-        </Link>
-      </div>
-    );
-  }
+  // if (user === null) {
+  //   return (
+  //     <div>
+  //       <Link>
+  //         <Signup></Signup>
+  //       </Link>
+  //     </div>
+  //   );
+  // }
 
   if (data === undefined) {
     return (
@@ -95,10 +95,10 @@ const Profile = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-2">Details</h3>
-                <div className="flex items-center mb-2">
+                {/* <div className="flex items-center mb-2">
                   <b>Arogya number : &nbsp;</b>
                   <p className="text-lg"> {data?.ArogyaNumber}</p>
-                </div>
+                </div> */}
                 <div className="flex items-center mb-2">
                   <FontAwesomeIcon
                     icon={faMobileScreenButton}
