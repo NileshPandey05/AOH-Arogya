@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useStateValue } from "../context/StateProvider";
-// import { query, where } from "firebase/firestore";
+import Lottie from 'lottie-react'; 
+import notFound from "../assest/notfound.json"
 import {
   collection,
   doc,
@@ -57,7 +58,17 @@ const Prescription = () => {
   };
 
   if (isDoctor === false) {
-    return <h1 className="mt-10">U are not a doctor</h1>;
+    return (
+      <div className=" w-full grid md:grid-cols-2 grid-cols-1 mt-4 ml-12">
+        <h1 className="mt-[260px] text-center text-3xl font-bold 
+         ">You Are Not Doctor...</h1>
+        <Lottie 
+          animationData={notFound}
+          className="w-[400px]  "
+        />
+        
+      </div>
+    );
   } else {
     return (
       <div className="mt-10">
