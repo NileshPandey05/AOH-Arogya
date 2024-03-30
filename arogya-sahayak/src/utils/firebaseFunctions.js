@@ -69,7 +69,9 @@ export const uploadImage = (imageUplaod) => {
 
     imageUplaod.map(async (imageItem) => {
       console.log(imageItem);
-      const imageRef = ref(storage, `${user.uid}/${imageItem.filename}`);
+      const imageRef = ref(storage, `${user.uid}/${
+        imageItem.filename
+      }`);
       await uploadBytes(imageRef, imageItem.file).then((response) => {
         console.log(response);
       });
@@ -215,3 +217,41 @@ export const getAvailableSlots = async (id) => {
   }
 };
 
+
+export const prescriptionUpload = async (imageUplaod, phoneNumber) => {
+  try {
+    if (imageUplaod.length === 0) return;
+
+    imageUplaod.map(async (imageItem) => {
+      console.log(imageItem);
+      const imageRef = ref(storage,`${phoneNumber}/${imageItem.filename}`);
+      await uploadBytes(imageRef, imageItem.file).then((response) => {
+        console.log(response);
+      });
+    });
+  } catch (e) {
+    console.error("Error saving Files", e);
+  }
+};
+
+
+export const fetchPatientData = async (number) => {
+  try {
+    let patient;
+    const docRef = collection(firestore, "patients");
+    // const docSnap = await getDoc(docRef);
+    const q = query(docRef, where("phone", "==", number));
+    const querySnapshot = await getDocs(q);
+    if (querySnapshot.empty) {
+      console.log("No such patitien found");
+      return null;
+    }
+    querySnapshot.forEach((doc) => {
+      patient = doc.data();
+
+    });
+    return patient;
+  } catch (e) {
+    console.error("Error in fetching registered user info", e);
+  }
+};

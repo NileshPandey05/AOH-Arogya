@@ -33,7 +33,7 @@ function DoctorProfile() {
       setdata(doctor);
       const availableSolts = await getAvailableSlots(docID);
       setslots(availableSolts ? availableSolts : []);
-      const patientdata = await fetchRegisteredData(user.uid);
+      const patientdata = await fetchRegisteredData(user.phoneNumber? user.phoneNumber: "" );
       setpatient(patientdata);
       console.log("patientdata", patientdata);
     };

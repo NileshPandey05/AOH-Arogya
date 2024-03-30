@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { fetchFiles, fetchRegisteredData } from "../utils/firebaseFunctions";
+import { fetchFiles, fetchPatientData, fetchRegisteredData } from "../utils/firebaseFunctions";
 import {
   faCalendarCheck,
   faCreditCard,
@@ -23,7 +23,7 @@ const SearchPatient = () => {
     const filedata = await fetchFiles(agrogyaNumber).then((res) => {
       console.log(res);
     });
-    await fetchRegisteredData(agrogyaNumber).then((res) => {
+    await fetchPatientData(agrogyaNumber).then((res) => {
       console.log(res);
       setdata(res);
     });

@@ -33,6 +33,7 @@ import DoctorRegister from "./pages/DoctorRegister";
 import NewSignUp from "./pages/NewSignUp";
 import SearchPatient from "./pages/SearchPatient";
 import Departmentdetails from "./pages/Departmentdetails";
+import Prescription from "./pages/Prescription";
 import "./App.css";
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
           <Route path="/doctorRegister" element={<DoctorRegister />} />
           <Route path="/newsignup" element={<NewSignUp />} />
           <Route path="/search" element={<SearchPatient />} />
+          <Route path="/prescription" element={<Prescription />} />
         </Routes>
       </main>
     
