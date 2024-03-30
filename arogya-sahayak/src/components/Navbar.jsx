@@ -317,15 +317,36 @@ const Navbar = () => {
                 </Link>
                 <div className=""></div>
 
-                <Link to={"/services"}>
+                <Link to={"https://aarogya-sahayakv.vercel.app/"}>
                   <li
                     className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-200 px-4 py-2"
                     onClick={() => setIsMenu(false)}
                   >
-                    Services
+                    Videocall
+                    
                   </li>
+
                 </Link>
+
+
+
+                <Link to={"/Search"}>
+                  <li
+                    className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-200 px-4 py-2"
+                    onClick={() => setIsMenu(false)}
+                  >
+                    Search Patient
+                    
+                  </li>
+
+                </Link>
+
+
               </ul>
+
+
+
+
 
               <p
                 className="m-2 p-2 rounded-md shadow:md flex items-center justify-center bg-gray-300 gap-3 cursor-pointer hover:bg-slate-200 transition-all duration-100 ease-in-out text-textColor text-base"
