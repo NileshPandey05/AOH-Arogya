@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { fetchFiles, fetchPatientData, fetchRegisteredData } from "../utils/firebaseFunctions";
+import {
+  fetchFiles,
+  fetchPatientData,
+  fetchRegisteredData,
+} from "../utils/firebaseFunctions";
 import {
   faCalendarCheck,
   faCreditCard,
@@ -20,14 +24,15 @@ const SearchPatient = () => {
   const [data, setdata] = useState();
 
   const getPatient = async () => {
-    const filedata = await fetchFiles(agrogyaNumber).then((res) => {
-      console.log(res);
-    });
+    localStorage.setItem("filesLists","{}")
+    // const filedata = await fetchFiles(agrogyaNumber).then((res) => {
+    //   console.log(res);
+    // });
     await fetchPatientData(agrogyaNumber).then((res) => {
       console.log(res);
       setdata(res);
     });
-    setfiles(filedata);
+    // setfiles(filedata);
     const storedFilesJSON = localStorage.getItem("filesLists");
     if (storedFilesJSON) {
       const parsedFiles = JSON.parse(storedFilesJSON);
@@ -36,20 +41,42 @@ const SearchPatient = () => {
       console.log("files", files);
     }
 
-    setagrogyaNumber("")
+    setagrogyaNumber("");
+  };
+
+  const getThemFiles = async () => {
+    console.log(data.id);
+    const filedata = await fetchFiles(data.id).then((res) => {
+      console.log(res);
+    });
+    setfiles(filedata);
+    const storedFilesJSON = localStorage.getItem("filesLists");
+    if (storedFilesJSON) {
+      const parsedFiles = JSON.parse(storedFilesJSON);
+      console.log("filesJSON", parsedFiles);
+      setfiles(parsedFiles);
+      console.log("files", files);
+      // localStorage.setItem("filesLists",{})
+    }
   };
   return (
     <div>
-      <p className=" text-center font-extrabold text-5xl mt-16">Identity Insight: Peer into Your Profile with the Power of Your Arogya Number</p>
+      <p className=" text-center font-extrabold text-5xl mt-16">
+        Identity Insight: Peer into Your Profile with the Power of Your Arogya
+        Number
+      </p>
       <div className="mt-20 flex flex-col items-center  justify-center ">
-        <input  
+        <input
           type="text"
           className=" border h-12 w-96 px-3 rounded-lg border-gray-600 text-gray-900 shadow-md shadow-blue-200"
           placeholder="Enter Your Arogya Number..."
           value={agrogyaNumber}
           onChange={(e) => setagrogyaNumber(e.target.value)}
         />
-        <button className="  bg-blue-900  border mt-6 h-10  w-48 rounded-lg text-white " onClick={getPatient} >
+        <button
+          className="  bg-blue-900  border mt-6 h-10  w-48 rounded-lg text-white "
+          onClick={getPatient}
+        >
           Get Profile
         </button>
       </div>
@@ -112,6 +139,7 @@ const SearchPatient = () => {
                 id="labResults"
               >
                 <p className="text-lg font-semibold mb-4">Latest Lab Results</p>
+                <button onClick={getThemFiles}>GET FILES</button>
 
                 {Object.keys(files).length > 0 ? (
                   Object.keys(files).map((ele) => {

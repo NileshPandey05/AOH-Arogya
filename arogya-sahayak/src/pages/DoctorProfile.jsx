@@ -33,7 +33,7 @@ function DoctorProfile() {
       setdata(doctor);
       const availableSolts = await getAvailableSlots(docID);
       setslots(availableSolts ? availableSolts : []);
-      const patientdata = await fetchRegisteredData(user.phoneNumber? user.phoneNumber: "" );
+      const patientdata = await fetchRegisteredData(user.uid );
       setpatient(patientdata);
       console.log("patientdata", patientdata);
     };
@@ -126,7 +126,7 @@ function DoctorProfile() {
           {user.email === "blazeplays2003@gmail.com" ? (
             <>
             <h1 className="font-bold text-3xl mb-6 text-center border  h-20 w-72 -mt-[160px] bg-blue-200 rounded-2xl">
-            Patient: {patient.username}
+            Patient: {patient?.username}
           </h1>
            <div className=" border w-52 h-12 py-2 mt-8 p text-center bg-blue-900 rounded-2xl ml-10">
             <Link
@@ -139,7 +139,7 @@ function DoctorProfile() {
             </>
           ) : (
             <h1 className="font-bold text-3xl mb-6 text-center border  h-20 w-72 -mt-[152px] bg-blue-200 rounded-2xl">
-            Patient: {patient.username}
+            Patient: {patient?.username}
           </h1>
           )}
           {slots.length === 0 ? (

@@ -17,6 +17,7 @@ const Register = () => {
   };
 
   const [userInfo, setuserInfo] = useState({
+    id:user?.uid,
     username: user ? user.displayName : "",
     photoURL:user?.photoURL,
     fname: "",
