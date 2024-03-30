@@ -105,14 +105,6 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          to="/Precription"
-                          className="block px-4 py-2 hover:bg-gray-100"
-                        >
-                          Precription
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
                           to="/Search"
                           className="block px-4 py-2 hover:bg-gray-100"
                         >
