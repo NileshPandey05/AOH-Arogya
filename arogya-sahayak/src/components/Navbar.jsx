@@ -105,10 +105,18 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
+                          to="/Prescription"
+                          className="block px-4 py-2 hover:bg-gray-100"
+                        >
+                          Prescription
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
                           to="/Search"
                           className="block px-4 py-2 hover:bg-gray-100"
                         >
-                          Search
+                          Patient Details
                         </Link>
                       </li>
                     </ul>
@@ -224,7 +232,6 @@ const Navbar = () => {
             <img
               src={user ? user.photoURL : Avatar}
               className="w-10 min-w-[40px] h-10 min-h-[40px] drop-shadow-xl cursor-pointer rounded-full"
-          
               onClick={login}
             />
             {isMenu && (
@@ -307,7 +314,8 @@ const Navbar = () => {
                   >
                     Doctors
                   </li>
-                </Link><div className=""></div>
+                </Link>
+                <div className=""></div>
 
                 <Link to={"/services"}>
                   <li
