@@ -135,7 +135,7 @@ const SearchPatient = () => {
               <br />
 
               <div
-                className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg p-8 shadow-md text-white"
+                className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg p-8 shadow-md text-white md:mb-64"
                 id="labResults"
               >
                 <p className="text-lg font-semibold mb-4">Latest Lab Results</p>
@@ -162,7 +162,7 @@ const SearchPatient = () => {
                 )}
               </div>
             </div>
-            <div className="flex-1 p-4">
+            <div className="flex flex-col p-4">
               <div
                 id="overview"
                 className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg p-8 shadow-md text-white"
@@ -243,7 +243,33 @@ const SearchPatient = () => {
                   </p>
                 </div>
               </div>
+              
             </div>
+            <div
+            id="options-bar"
+            className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg p-8 shadow-md h-fit md:w-[95%] md:ml-5 md:-mt-56  text-white"
+          >
+            <h2 className="text-3xl font-bold mb-4">Prescriptions</h2>
+            {/* {console.log("hhhh" , data.prescription[0].prescrip)} */}
+            {data.prescription
+              ? data.prescription.map((ele) => {
+                  return (
+                    <div className="flex flex-col space-y-2">
+                      <p className="text-lg">
+                        <b>Prescription:</b> &nbsp;{" "}
+                        {ele?.prescrip}
+                      </p>
+                      <p className="text-lg">
+                        <b>Date:</b> &nbsp;{ele?.createdAt}
+                      </p>
+                      <p className="text-lg">
+                        <b>By Dr:</b> &nbsp; {ele?.dr}
+                      </p>
+                    </div>
+                  );
+                })
+              : console.log(data.prescription)}
+          </div>
           </>
         )}
       </div>

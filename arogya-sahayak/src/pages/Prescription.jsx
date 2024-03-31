@@ -18,7 +18,7 @@ import {
 } from "firebase/firestore";
 import { firestore } from "../firebase.config";
 import { useState } from "react";
-import { fetchPatientData, prescriptionUpload, uploadImage } from "../utils/firebaseFunctions";
+import { fetchPatientData, prescriptionUpload, saveRegisteredData, savedata, uploadImage } from "../utils/firebaseFunctions";
 
 const Prescription = () => {
   const [{ user }, dispatch] = useStateValue();
@@ -33,7 +33,15 @@ const Prescription = () => {
     });
   };
    const writePrescription = async() =>{
+    let prescription=[];
     let data = await fetchPatientData(arogya);
+    if(data.prescription){
+      prescription = data.prescription;
+    }
+    prescription.push({prescrip,createdAt: new Date().toISOString().split('T')[0],dr:user.displayName});
+    console.log({...data,prescription})
+
+    savedata({...data,prescription});
     
 
    }
@@ -108,12 +116,8 @@ const Prescription = () => {
       </div>
       
      <textarea placeholder="Enter the Prescription..." value={prescrip} onChange={(e)=>setPrescrip(e.target.value)} className=" h-64  w-96 border p-3 border-black mt-10 " >
-
-     <button className=" border h-12 w-32 rounded-lg  bg-blue-900 text-white font-semibold text-lg mt-4 " onClick={writePrescription}> Submit</button>
-
-
-
      </textarea>
+     <button className=" border h-12 w-32 rounded-lg  bg-blue-900 text-white font-semibold text-lg mt-4 " onClick={writePrescription}> Submit</button>
       
       
       

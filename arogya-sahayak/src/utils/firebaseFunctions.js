@@ -255,3 +255,13 @@ export const fetchPatientData = async (number) => {
     console.error("Error in fetching registered user info", e);
   }
 };
+
+export const savedata = async (userInfo) => {
+  try {
+    const docRef = doc(collection(firestore, "patients/"), `${user.uid}`);
+    const result = await setDoc(docRef, userInfo);
+    console.log("result", result);
+  } catch (e) {
+    console.error("Error Registering user", e);
+  }
+};

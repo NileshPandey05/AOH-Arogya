@@ -76,7 +76,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="flex flex-col md:flex-row gap-y-2 justify-center ">
+    <div className="flex flex-col flex-wrap col-span-2 md:flex-row gap-y-2 justify-between md:px-20 ">
       {data !== undefined && (
         <>
           {" "}
@@ -234,6 +234,31 @@ const Profile = () => {
                 </p>
               </div>
             </div>
+          </div>
+          <div
+            id="options-bar"
+            className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg p-8 shadow-md h-fit md:w-[47%] justify-start md:-mt-32 md:ml-5  text-white"
+          >
+            <h2 className="text-3xl font-bold mb-4">Prescriptions</h2>
+            {/* {console.log("hhhh" , data.prescription[0].prescrip)} */}
+            {data.prescription
+              ? data.prescription.map((ele) => {
+                  return (
+                    <div className="flex flex-col space-y-2">
+                      <p className="text-lg">
+                        <b>Prescription:</b> &nbsp;{" "}
+                        {ele?.prescrip}
+                      </p>
+                      <p className="text-lg">
+                        <b>Date:</b> &nbsp;{ele?.createdAt}
+                      </p>
+                      <p className="text-lg">
+                        <b>By Dr:</b> &nbsp; {ele?.dr}
+                      </p>
+                    </div>
+                  );
+                })
+              : console.log(data.prescription)}
           </div>
         </>
       )}
