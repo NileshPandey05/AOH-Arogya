@@ -98,7 +98,7 @@ const Doctors = () => {
       <div className=" grid md:grid-cols-3 grid-rows-2 gap-4 mt-14 md:mt-0 grid-cols-1">
         {doctors.map((doctor) => {
           return (
-            <div className=" border h-auto w-[320px]  rounded-xl shadow-xl shadow-blue-200 ml-12">
+            <div className=" border h-auto w-[320px]  rounded-xl shadow-xl shadow-blue-200 md:ml-12 mx-auto">
               <img
                 className="  w-[320px] h-[250px] bg-blue-100  rounded-xl object-cover object-right-top"
                 src={doctor.doctorInfo.image}
