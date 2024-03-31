@@ -18,7 +18,7 @@ const Department = () => {
     <div>
       <h1 className=" text-5xl text-center font-bold mt-10 ">Departments</h1>
 
-      <div className=" grid grid-cols-6  items-center justify-center gap-6 mt-10 ">
+      <div className=" grid md:grid-cols-6 grid-cols-1 ml-[90px] md:ml-0 items-center justify-center gap-6 mt-10 ">
         
         <Link to={"/departmentdetails"}>
           <div className=" border shadow-md  shadow-blue-100  w-52 h-64 rounded-2xl hover:bg-blue-400 hover:text-white hover:-mt-4  transition-all ease-in-out   duration-300   ">
@@ -96,8 +96,8 @@ const Department = () => {
 
       <div className=" mt-28 text-center text-5xl font-bold ">
         <h1>Awards</h1>
-        <div className=" flex flex-wrap gap-6 justify-center">
-          <div className=" border shadow-md  shadow-blue-100   w-[260px] h-[300px] rounded-2xl mt-14">
+        <div className=" flex flex-wrap gap-y-2 md:gap-6 justify-center">
+          <div className=" border shadow-md  shadow-blue-100   w-[260px] h-[300px] rounded-2xl md:mt-14 mt-6">
             <div className=" mt-6 ml-4 ">
               <img
                 src={Award}
@@ -115,7 +115,7 @@ const Department = () => {
             </div>
           </div>
 
-          <div className=" border shadow-md  shadow-blue-100   w-[260px] h-[300px] rounded-2xl mt-14">
+          <div className=" border shadow-md  shadow-blue-100   w-[260px] h-[300px] rounded-2xl md:mt-14 mt-6">
             <div className=" mt-6 ml-4 ">
               <img
                 src={Award}
@@ -133,7 +133,7 @@ const Department = () => {
             </div>
           </div>
 
-          <div className=" border shadow-md  shadow-blue-100   w-[260px] h-[300px] rounded-2xl mt-14">
+          <div className=" border shadow-md  shadow-blue-100   w-[260px] h-[300px] rounded-2xl md:mt-14 mt-6">
             <div className=" mt-6 ml-4 ">
               <img
                 src={Award}
@@ -151,7 +151,7 @@ const Department = () => {
             </div>
           </div>
 
-          <div className=" border shadow-md  shadow-blue-100   w-[260px] h-[300px] rounded-2xl mt-14">
+          <div className=" border shadow-md  shadow-blue-100   w-[260px] h-[300px] rounded-2xl md:mt-14 mt-6">
             <div className=" mt-6 ml-4 ">
               <img
                 src={Award}

@@ -51,18 +51,22 @@ const Appointments = () => {
   };
 
   return user ? (
-    <div>
-      <div>
-        <p className="text-start text-5xl font-extrabold ml-[600px] mt-16">
+    <div className=" md:mt-0">
+      <div className="md:flex flex flex-col md:flex-row gap-4 text-center  items-center justify-evenly mt-10 w-full">
+        <div className="w-[90%]">
+        <p className="md:text-start text-center text-5xl font-extrabold ">
           Don’t Let Your Health Take a Backseat!
         </p>
-        <p className="text-start text-2xl font-bold ml-[600px] mt-6">
+        <p className="md:text-start text-center text-2xl font-bold ">
           Fill out the appointment form below to schedule a consultation with
           one of our healthcare professionals.
         </p>
+
+        </div>
+       
         <img
           src={Bannerimage}
-          className="-mt-[220px] h-[350px] w-auto"
+          className=" h-[350px] w-auto"
           alt="Banner"
         ></img>
       </div>
@@ -93,16 +97,16 @@ const Appointments = () => {
         </div>
       </div>
 
-      <div className="-mt-52">
-        <p className=" text-end mr-20 mt-[300px] text-3xl font-bold">
+      <div className="md:-mt-52">
+        <p className=" md:text-end text-center md:mr-20 md:mt-[300px] mt-6 text-3xl font-bold">
           Contact Info
         </p>
         <img
           src={Appimage}
-          className=" h-70 w-[320px] ml-[820px] mt-10 rounded-lg"
+          className=" h-70 md:w-[320px] w-full md:ml-[820px] mx-auto mt-10 rounded-lg"
           alt="App image"
         />
-        <div className="ml-[820px] mt-6">
+        <div className="md:ml-[820px] mt-6 mx-auto sm:w-[90%]">
           <div>
             <IoCall className="w-10 h-10" />
             <p className="-mt-[45px] ml-14 text-xl font-semibold">Phone</p>
@@ -126,7 +130,7 @@ const Appointments = () => {
         </div>
       </div>
 
-      <div className="-mt-[485px]">
+      <div className="md:-mt-[485px] mt-10">
         <p className="text-start text-3xl font-bold ml-6">Appointment</p>
 
         <form onSubmit={handleSubmit} className="mt-12">
@@ -160,7 +164,7 @@ const Appointments = () => {
               />
             </div>
 
-            <div className="w-full">
+            <div className="w-full ">
               <label htmlFor="medicalrecord" className="text-xl px-6 block">
                 Medical Record Number
               </label>
@@ -175,7 +179,7 @@ const Appointments = () => {
               />
             </div>
 
-            <div className="-mt-[112px] ml-[260px]">
+            <div className="md:-mt-[112px] md:ml-[260px]">
               <label htmlFor="email" className="text-xl px-6 block">
                 Email
               </label>
@@ -190,7 +194,7 @@ const Appointments = () => {
               />
             </div>
 
-            <div className="-ml-[522px]">
+            <div className="md:-ml-[522px]">
               <label htmlFor="date" className="text-xl px-6 block">
                 Date
               </label>
@@ -222,7 +226,7 @@ const Appointments = () => {
           {/* Reason to visit */}
           <div className="mt-10 ml-5">
             <p className=" text-xl font-semibold">Reason For Visit</p>
-            <div className="flex items-start gap-8 -mt-2">
+            <div className="flex items-start gap-8 -mt-2 flex-wrap">
               <label className="mt-6 ">
                 <input
                   className=" w-6 h-6"
@@ -267,7 +271,7 @@ const Appointments = () => {
           {/* Department */}
           <div className="mt-10 ml-5">
             <p className=" text-xl font-semibold">Department</p>
-            <div className="flex items-start gap-8 -mt-2">
+            <div className="flex items-start flex-wrap gap-8 -mt-2">
               <label className="mt-6 ">
                 <input
                   className=" w-6 h-6"

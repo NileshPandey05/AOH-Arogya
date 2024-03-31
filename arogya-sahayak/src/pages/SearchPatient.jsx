@@ -61,7 +61,7 @@ const SearchPatient = () => {
   };
   return (
     <div>
-      <p className=" text-center font-extrabold text-5xl mt-16">
+      <p className=" text-center font-extrabold lg:text-5xl text-3xl mt-16">
         Identity Insight: Peer into Your Profile with the Power of Your Arogya
         Number
       </p>
@@ -80,7 +80,7 @@ const SearchPatient = () => {
           Get Profile
         </button>
       </div>
-      <div className="flex mt-10">
+      <div className="grid md:grid-cols-2 grid-cols-1 lg:mt-6">
         {data !== undefined && (
           <>
             {" "}
@@ -139,7 +139,7 @@ const SearchPatient = () => {
                 id="labResults"
               >
                 <p className="text-lg font-semibold mb-4">Latest Lab Results</p>
-                <button onClick={getThemFiles}>GET FILES</button>
+                <button onClick={getThemFiles} className=" border h-10 w-[100px] bg-white text-black rounded-lg text-center mb-2  font-semibold" >GET FILES</button>
 
                 {Object.keys(files).length > 0 ? (
                   Object.keys(files).map((ele) => {

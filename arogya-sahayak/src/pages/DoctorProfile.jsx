@@ -55,12 +55,12 @@ function DoctorProfile() {
   };
 
   return (
-    <div className=" mt-12 grid grid-cols-2 items-center justify-center">
-      <div className=" border w-[300px] h-[220px] mt-[125px] rounded-3xl shadow-xl shadow-blue-200">
+    <div className=" mt-12 grid md:grid-cols-2 grid-cols-1 items-center justify-center">
+      <div className=" border w-[300px] h-[220px] md:mt-[125px] mx-auto rounded-3xl shadow-xl shadow-blue-200">
         <img
           src={data?.image}
           alt=""
-          className="w-[300px] h-auto rounded-lg shadow-xl -mt-[338px]"
+          className="w-[300px] h-auto rounded-lg shadow-xl md:-mt-[338px] mt-0"
         />
         <div className="grid grid-cols-3 items-center gap-2 mt-8">
           <FaXTwitter className=" text-center h-10 w-10 bg-blue-900 text-white rounded-full px-2 py-2 ml-16 hover:bg-blue-400" />
@@ -68,7 +68,7 @@ function DoctorProfile() {
           <FaFacebookF className="text-center h-10 w-10 bg-blue-900 text-white rounded-full px-2 py-2 -md:ml-16 hover:bg-blue-400" />
         </div>
       </div>
-      <div className=" w-[900px]  h-auto -ml-[260px] mt-8 md:mt-0 bg-blue-100 rounded-lg shadow-lg p-8">
+      <div className=" md:w-[900px]  h-auto md:-ml-[260px] mt-14 md:mt-0 bg-blue-100 rounded-lg shadow-lg p-8">
         <p className="font-bold text-4xl mb-4">Doctor's Details</p>
         <p className="text-lg font-bold ">
           Specialization: {data?.specialization}
@@ -122,13 +122,13 @@ function DoctorProfile() {
         {/* <h1 className="font-bold text-3xl mb-4 text-center">
           Patient: {patient.username}
         </h1> */}
-        <div className=" mt-12">
+        <div className=" md:mt-12 mt-52 ml-10 md:ml-0">
           {user.email === "blazeplays2003@gmail.com" ? (
             <>
-            <h1 className="font-bold text-3xl mb-6 text-center border  h-20 w-72 -mt-[160px] bg-blue-200 rounded-2xl">
+            <h1 className="font-bold text-3xl mb-6 text-center border mx-auto   h-20 w-72 -mt-[160px] bg-blue-200 rounded-2xl">
             Patient: {patient?.username}
           </h1>
-           <div className=" border w-52 h-12 py-2 mt-8 p text-center bg-blue-900 rounded-2xl ml-10">
+           <div className=" border w-52 h-fit py-2 mt-8 p text-center bg-blue-900 rounded-2xl mx-auto ml-10">
             <Link
               className="ml-5 mr-5 text-white text-xl"
               to={`/bookslots/${docID}`}
@@ -143,7 +143,7 @@ function DoctorProfile() {
           </h1>
           )}
           {slots.length === 0 ? (
-            <p className="text-center col-span-full mt-6 -ml-72 text-xl ">
+            <p className="text-center col-span-full mt-6 md:-ml-72 mr-10 text-xl ">
               There are no slots available right now!
             </p>
           ) : (

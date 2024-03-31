@@ -61,14 +61,13 @@ const Prescription = () => {
 
   if (isDoctor === false) {
     return (
-      <div className=" w-full grid md:grid-cols-2 grid-cols-1 mt-4 ml-12">
-        <h1 className="mt-[260px] text-center text-3xl font-bold 
-         ">You Are Not Doctor...</h1>
+      <div className="  ">
+       
         <Lottie 
           animationData={notFound}
-          className="w-[400px]  "
-        />
-        
+          className="w-[350px]  h-auto  lg:ml-96 md:ml-40 "
+        /> 
+         <h1 className=  " text-center text-3xl font-bold -mt-12  ">You Are Not Doctor...</h1>
       </div>
     );
   } else {

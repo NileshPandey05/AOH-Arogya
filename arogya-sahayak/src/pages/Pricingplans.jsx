@@ -140,10 +140,10 @@ const Pricingplans = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-6xl">
           <div className="md:h-screen flex flex-col justify-center md:pb-36 pt-10 md:pt-0 md:gap-3 gap-1">
             <div className="flex"></div>
-            <p className="md:text-6xl text-4xl font-extrabold mt-5 -ml-9">
+            <p className="md:text-6xl text-4xl text-center md:text-start  font-extrabold mt-5 md:-ml-9">
               Find the Right Plan for You&nbsp;
             </p>
-            <p className="mt-5 md:mt-1 text-mediumGrey md:w-3/4 text-xl font-semibold -ml-9">
+            <p className="mt-5 md:mt-1 text-mediumGrey md:w-3/4 text-center md:text-start text-xl font-semibold md:-ml-9">
               Explore Our Membership Options and Start Your Journey to Better
               Health
             </p>
@@ -156,8 +156,8 @@ const Pricingplans = () => {
         </div>
       </section>
 
-      <div className="text-center -mt-32">
-        <p className="text-5xl font-bold ml-48 mr-48">
+      <div className="text-center mt-10 md:-mt-32">
+        <p className="text-5xl font-bold md:ml-48 md:mr-48">
           Choose Your Arogya Sahayak Membership Plan
         </p>
       </div>

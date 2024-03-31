@@ -79,10 +79,10 @@ const Doctors = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-6xl ">
           <div className="md:h-screen flex flex-col justify-center md:pb-36 pt-10 md:pt-0 md:gap-3 gap-1">
             <div className="flex"></div>
-            <p className="md:text-6xl text-4xl font-extrabold mt-5 -ml-9">
+            <p className="md:text-6xl text-4xl text-center md:text-start font-extrabold mt-5 pl-10 md:pl-0 -ml-9">
               Introduce You to Our Experts &nbsp;
             </p>
-            <p className="mt-5 md:mt-1 text-mediumGrey md:w-3/4 text-xl -ml-9">
+            <p className="mt-5 md:mt-1 text-mediumGrey md:w-3/4 md:text-start text-center pl-10 md:pl-0 text-xl -ml-9">
               The list of certified doctors with years of professional
               experiences
             </p>
@@ -95,7 +95,7 @@ const Doctors = () => {
         </div>
       </section>
 
-      <div className=" grid md:grid-cols-3 grid-rows-2 gap-4  grid-cols-1">
+      <div className=" grid md:grid-cols-3 grid-rows-2 gap-4 mt-14 md:mt-0 grid-cols-1">
         {doctors.map((doctor) => {
           return (
             <div className=" border h-auto w-[320px]  rounded-xl shadow-xl shadow-blue-200 ml-12">

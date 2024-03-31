@@ -68,8 +68,8 @@ const Register = () => {
   };
 
   return (
-    <form className="ml-10 mr-10 mt-20">
-      <div className="max-w-3x3 mx-auto mt-8 p-8 rounded-md shadow-md bg-gray-100">
+    <form className="lg:ml-10   lg:mr-10  mt-20">
+      <div className="max-w-3x3 mx-auto mt-8 lg:p-8  p-2 rounded-md shadow-md bg-gray-100">
         <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">
             Profile
@@ -79,11 +79,11 @@ const Register = () => {
             share.
           </p>
 
-          <div className="bg-white rounded-md shadow-md p-8 mb-8">
+          <div className="bg-white rounded-md shadow-md p-8 mb-8 mt-4">
             <div className="sm:col-span-3">
               <h2
                 htmlFor="argogya number"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-gray-900 "
               >
                 Your Arogya Number: {user.phoneNumber?user.phoneNumber:userInfo.phone}
               </h2>
@@ -111,7 +111,7 @@ const Register = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-md shadow-md p-8 mb-8">
+        <div className="bg-white rounded-md shadow-md p-8 mb-8 sm:-mt-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">
             Personal Information
           </h2>
@@ -134,6 +134,7 @@ const Register = () => {
                   id="fname"
                   onChange={handleChange}
                   value={userInfo.fname}
+                  required
                   autocomplete="given-name"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -154,6 +155,7 @@ const Register = () => {
                   id="lname"
                   onChange={handleChange}
                   value={userInfo.lname}
+                  required
                   autocomplete="family-name"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -172,6 +174,7 @@ const Register = () => {
                   id="email"
                   name="email"
                   type="email"
+                  required
                   value={userInfo.email}
                   autocomplete="email"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -192,6 +195,7 @@ const Register = () => {
                   name="phone"
                   type="number"
                   onChange={handleChange}
+                  required
                   value={userInfo.phone}
                   autocomplete="phone"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -209,6 +213,7 @@ const Register = () => {
                   name="gender"
                   type="radio"
                   value="male"
+                  required
                   onChange={handleChange}
                   className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                 />
@@ -286,6 +291,7 @@ const Register = () => {
                   name="aadhaar"
                   id="aadhaar"
                   value={userInfo.aadhaar}
+                  required
                   onChange={handleChange}
                   autocomplete="address-level2"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -306,6 +312,7 @@ const Register = () => {
                   name="address"
                   id="address"
                   value={userInfo.address}
+                  required
                   onChange={handleChange}
                   autocomplete="street-address"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -326,6 +333,7 @@ const Register = () => {
                   name="city"
                   id="city"
                   value={userInfo.city}
+                  required
                   onChange={handleChange}
                   autocomplete="address-level2"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -346,6 +354,7 @@ const Register = () => {
                   name="state"
                   id="state"
                   value={userInfo.state}
+                  required
                   onChange={handleChange}
                   autocomplete="address-level1"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -365,6 +374,7 @@ const Register = () => {
                   type="text"
                   name="pincode"
                   id="pincode"
+                  required
                   value={userInfo.pincode}
                   onChange={handleChange}
                   autocomplete="postal-code"
@@ -478,6 +488,7 @@ const Register = () => {
                   name="Emername"
                   id="Emername"
                   value={userInfo.Emername}
+                  required
                   onChange={handleChange}
                   autocomplete="name"
                   className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
@@ -500,6 +511,7 @@ const Register = () => {
                   type="number"
                   name="Emerphone"
                   id="Emerphone"
+                  required
                   value={userInfo.Emerphone}
                   onChange={handleChange}
                   autocomplete="phone"
@@ -521,7 +533,8 @@ const Register = () => {
                 id="EmerRelation"
                 name="EmerRelation"
                 autocomplete="Relation"
-                onChange={handleChange}
+                  required
+                  onChange={handleChange}
                 value={userInfo.EmerRelation}
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
               >
