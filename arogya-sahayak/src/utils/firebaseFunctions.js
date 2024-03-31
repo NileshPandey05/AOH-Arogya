@@ -258,7 +258,7 @@ export const fetchPatientData = async (number) => {
 
 export const savedata = async (userInfo) => {
   try {
-    const docRef = doc(collection(firestore, "patients/"), `${user.uid}`);
+    const docRef = doc(collection(firestore, "patients/"), `${userInfo.uid}`);
     const result = await setDoc(docRef, userInfo);
     console.log("result", result);
   } catch (e) {
