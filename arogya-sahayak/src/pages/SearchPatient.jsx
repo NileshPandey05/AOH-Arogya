@@ -250,7 +250,7 @@ const SearchPatient = () => {
             className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg p-8 shadow-md h-fit md:w-[95%] md:ml-5 md:-mt-56  text-white"
           >
             <h2 className="text-3xl font-bold mb-4">Prescriptions</h2>
-            {/* {console.log("hhhh" , data.prescription[0].prescrip)} */}
+            {console.log("hhhh" , data.prescription)}
             {data.prescription
               ? data.prescription.map((ele) => {
                   return (

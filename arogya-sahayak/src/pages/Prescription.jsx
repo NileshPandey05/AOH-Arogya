@@ -115,7 +115,7 @@ const Prescription = () => {
       <hr className=" h-2 w-96"/>
       </div>
       
-     <textarea placeholder="Enter the Prescription..." value={prescrip} onChange={(e)=>setPrescrip(e.target.value)} className=" h-64  w-[90%] border p-3 border-black mt-10 " >
+     <textarea placeholder="Enter the Prescription..." value={prescrip} onChange={(e)=>setPrescrip(e.target.value)} className=" h-64  w-[90%] border p-3 border-black mt-10 " />
 
      <button className=" border h-12 w-32 rounded-lg  bg-blue-900 text-white font-semibold text-lg mt-4 " onClick={writePrescription}> Submit</button>
       
