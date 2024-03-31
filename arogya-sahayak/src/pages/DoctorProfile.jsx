@@ -46,7 +46,7 @@ function DoctorProfile() {
     if (slotSnapshot.exists) {
       const newData = {
         ...slotSnapshot.data(),
-        allocatedTo: patient.ArogyaNumber,
+        allocatedTo: patient.username,
       };
       setDoc(docRef, newData).then((res) => {
         console.log("the data has been updated");

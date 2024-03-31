@@ -25,7 +25,7 @@ const Appointments = () => {
     const getYourSlots = async () => {
       const data = [];
       const docRef = collection(firestore, "slots");
-      const q = query(docRef, where("allocatedTo", "==", user ? user.uid : ""));
+      const q = query(docRef, where("allocatedTo", "==", user ? user.displayName: ""));
       const querySnapshot = await getDocs(q);
 
       querySnapshot.forEach((doc) => {
