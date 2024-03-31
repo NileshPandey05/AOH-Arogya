@@ -76,11 +76,11 @@ const Profile = () => {
   }
 
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row gap-y-2 justify-center ">
       {data !== undefined && (
         <>
           {" "}
-          <div className="flex-1 p-4">
+          <div className="flex flex-col gap-y-2  p-4">
             <div
               className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg p-8 shadow-md text-white"
               id="Details"
@@ -157,7 +157,7 @@ const Profile = () => {
               )}
             </div>
           </div>
-          <div className="flex-1 p-4">
+          <div className="flex flex-col gap-y-2 p-4">
             <div
               id="overview"
               className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg p-8 shadow-md text-white"

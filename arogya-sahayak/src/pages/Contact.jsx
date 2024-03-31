@@ -26,7 +26,7 @@ export const Contact = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full mt-8 ">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center text-center md:text-left">
   <div class="space-y-5">
     <h2 class="font-bold text-4xl md:text-6xl md:ml-40 ">Contact Us</h2>
@@ -39,12 +39,12 @@ export const Contact = () => {
   </div>
 </div>
 
-<div className="grid md:grid-cols-1 justify-center items-center ml-32">
+<div className="grid md:grid-cols-1 justify-center items-center md:ml-32 ml-[120px] ">
   <form
     onSubmit={sendEmail}
-    className="md:w-[90%] w-auto md:px-8 px-12 -ml-[120px] py-4 border rounded-3xl shadow-md md:ml-0 "
+    className="md:w-[90%] w-auto md:px-8 px-2 -ml-[120px] py-4 border rounded-3xl shadow-md md:ml-0 "
   >
-    <div className="">
+    <div className="ml-2 pr-10">
       <label className="text-xl px-6 block py-2">Name</label>
       <input
         className="border h-12 w-full rounded-lg text-start px-4 mt-3 ml-4"
@@ -69,7 +69,7 @@ export const Contact = () => {
         required
       />
 
-      <input type="submit" value="Send" className="mt-6 mb-3 md:ml-80 px-20 ml-16 md:px-4  border text-white w-auto md:w-[20%] h-10 bg-blue-900 rounded-3xl" />
+      <input type="submit" value="Send" className="mt-6 mb-3 md:ml-80 px-20 ml-[76px] md:px-4  border text-white w-auto md:w-[20%] h-10 bg-blue-900 rounded-3xl" />
     </div>
   </form>
 </div>

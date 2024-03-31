@@ -34,7 +34,7 @@ const Home = () => {
 
       {/* Contact Information */}
       <section className="flex flex-col items-center justify-center w-[95%] px-4 py-8 md:px-10 md:py-16 border h-[180px] md:ml-[28px] md:mt-[-63px] mt-32">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl space-x-8 ml-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl space-x-9 mx-auto md:ml-4">
           <div className=" flex flex-col mt-20 ">
             <IoCallSharp className=" h-16 w-16 border bg-blue-950 rounded-full px-3 py-3 text-white " />
             <p className=" -mt-14 ml-20 text-xl font-bold "> Hotline</p>

@@ -18,22 +18,22 @@ const Gallery = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-6xl" id="home">
           <div className="md:h-screen flex flex-col justify-center md:pb-36 pt-10 md:pt-0 md:gap-3 gap-1">
             <div className="flex"></div>
-            <p className="md:text-6xl text-4xl font-extrabold -ml-4">
+            <p className="md:text-6xl text-4xl font-extrabold text-center md:text-start md:-ml-4">
               Welcome to Arogya Sahayak Gallery
             </p>
-            <p className="mt-5 md:mt-1 text-mediumGrey md:w-3/4 text-xl font-semibold -ml-4">
+            <p className="mt-5 md:mt-1 text-mediumGrey md:w-3/4 text-xl text-center md:text-start font-semibold md:-ml-4">
               The special moment of our hospital
             </p>
           </div>
           <div className="relative">
-            <div className="md:h-screen md:absolute flex justify-center items-center md:pb-36">
+            <div className="md:h-screen md:absolute flex justify-center items-center ml-12 md:ml-0 md:pb-36">
               <img src={Galleryimg} alt="Gallery Banner" />
             </div>
           </div>
         </div>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 -mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10 md:-mt-12">
       
         <img src={galleryimg2} alt="Gallery Image 2" className="aspect-w-16 aspect-h-9 object-cover rounded-2xl " />
         <img src={galleryimg3} alt="Gallery Image 3" className="aspect-w-16 aspect-h-9 object-cove rounded-2xl" />

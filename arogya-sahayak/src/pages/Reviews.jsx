@@ -11,29 +11,28 @@ const Reviews = () => {
   const [review, setreview] = useState("");
 
   return (
-    <div>
-      <div className=" mt-6 ml-8">
-        <h1 className=" text-center  text-5xl font-bold">Some Reviews </h1>
-        <h2 className=" text-center text-2xl font-semibold text-blue-800 mt-1">
-          {" "}
-          OF OUR CLIENTS{" "}
-        </h2>
+    <div className="hidden md:block">
+    <div className=" mt-6 md:ml-8">
+      <h1 className=" text-center  text-5xl font-bold">Some Reviews </h1>
+      <h2 className=" text-center text-2xl font-semibold text-blue-800 mt-1">
+        {" "}
+        OF OUR CLIENTS{" "}
+      </h2>
 
-        <div className=" border-l h-[400px]  text-center ml-[550px] border-gray-400 mt-14 "></div>
-        <div className=" items-start  -mt-[400px] ">
-          <div>
-            <img src={profile1} className=" w-16 h-16"></img>
-            <div className=" -mt-[50px] ml-24">
-              <p
-                className="  text-xl font-semibold text-gray-700 "
-              >
-                {" "}
-                PAULO HUBERT{" "}
-              </p>
-              <p> Navi, Mumbai Maharashtra</p>
-            </div>
-            <div className=" h-2 w-2 bg-blue-800  -mt-8 ml-[546px] rounded-full"></div>
+      <div className=" border-l h-[400px]  text-center ml-[550px] border-gray-400 mt-14 "></div>
+      <div className=" items-start  -mt-[400px] ">
+        <div>
+          <img src={profile1} className=" w-16 h-16"></img>
+          <div className=" -mt-[50px] ml-24">
+            <p className="  text-xl font-semibold text-gray-700 ">
+              {" "}
+              PAULO HUBERT{" "}
+            </p>
+            <p> Navi, Mumbai Maharashtra</p>
           </div>
+          <div className=" h-2 w-2 bg-blue-800  -mt-8 ml-[546px] rounded-full"></div>
+
+        </div>
 
           <div className=" mt-20 ml-28">
             <img src={profile2} className=" w-16 h-16"></img>
