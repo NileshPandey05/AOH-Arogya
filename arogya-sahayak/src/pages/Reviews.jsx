@@ -10,15 +10,15 @@ import cta from   '../images/cta_img.webp';
 const Reviews = () => {
   
   return (
-    <div>
-    <div className=" mt-6 ml-8">
+    <div className="hidden md:block">
+    <div className=" mt-6 md:ml-8">
       <h1 className=" text-center  text-5xl font-bold">Some Reviews </h1>
       <h2 className=" text-center text-2xl font-semibold text-blue-800 mt-1">
         {" "}
         OF OUR CLIENTS{" "}
       </h2>
 
-      <div className=" border-l h-[400px]  text-center ml-[550px] border-gray-400 mt-14 "></div>
+      <div className=" border-l h-[400px]  text-center md:ml-[550px] border-gray-400 mt-14 "></div>
       <div className=" items-start  -mt-[400px] ">
         <div>
           <img src={profile1} className=" w-16 h-16"></img>
