@@ -26,12 +26,17 @@ const Prescription = () => {
   const [doctordata, setdoctordata] = useState();
   const [arogya, setarogya] = useState("");
   const [imageUplaod, setimageUplaod] = useState([]);
-
+  const [prescrip, setPrescrip]=useState("")
   const upsetImage = (file) => {
     setimageUplaod((prev) => {
       return [...prev, file];
     });
   };
+   const writePrescription = async() =>{
+    let data = await fetchPatientData(arogya);
+    
+
+   }
 
   useEffect(() => {
     const checkdoctor = async () => {
@@ -72,17 +77,18 @@ const Prescription = () => {
     );
   } else {
     return (
-      <div className="mt-10">
-        <input type="text" className="bg-slate-600" value={arogya} onChange={(e)=>setarogya(e.target.value)}/>
-        <div className="text-sm leading-6">
-          <label htmlFor="Hypertension" className="font-medium text-gray-900">
+      <div className="mt-24 flex flex-col items-center justify-center">
+        <input type="text"  placeholder="Enter Your Patient Mobile Number..." className= " p-2 border h-12 w-72 text-black rounded-md " value={arogya} onChange={(e)=>setarogya(e.target.value)}/>
+        <div className="text-sm leading-6 mt-8">
+          <label htmlFor="Hypertension" className="font-bold text-gray-900 text-center text-4xl mt-8">
             Upload The Prescription
           </label>
-          <p className="text-gray-500">
-            <input
+          <p className="text-gray-500 mt-10 h-10 w-52 text-xl font-semibold text-center ml-20">
+            <input className=" "
               id="Hypertension"
               name={`${new Date().toISOString().split('T')[0]}_Prescription`}
               type="file"
+              required
               onChange={(e) => {
                 upsetImage({
                   file: e.target.files[0],
@@ -92,8 +98,37 @@ const Prescription = () => {
             />
           </p>
         </div>
-        <button onClick={writeData}> submit</button>
+        <button className=" border h-12 w-32 rounded-lg  bg-blue-900 text-white font-semibold text-lg mt-4 " onClick={writeData}> Submit</button>
+      
+
+      <div className="flex items-center justify-evenly mt-10 gap-x-2">
+      <hr className=" h-2 w-96 "/>
+      <p className="text-center mb-2">OR</p>
+      <hr className=" h-2 w-96"/>
       </div>
+      
+     <textarea placeholder="Enter the Prescription..." value={prescrip} onChange={(e)=>setPrescrip(e.target.value)} className=" h-64  w-96 border p-3 border-black mt-10 " >
+
+     <button className=" border h-12 w-32 rounded-lg  bg-blue-900 text-white font-semibold text-lg mt-4 " onClick={writePrescription}> Submit</button>
+
+
+
+     </textarea>
+      
+      
+      
+      </div>
+
+
+
+
+
+
+
+
+
+
+
     );
   }
 };
