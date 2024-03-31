@@ -79,7 +79,7 @@ const Appointments = () => {
           ) : (
             slots.map((slot) => (
               <Link
-                to={"/videocall"}
+                to={"https://aarogya-sahayakv.vercel.app/"}
                 key={slot.id}
                 className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg p-3 shadow-md text-white"
               >
