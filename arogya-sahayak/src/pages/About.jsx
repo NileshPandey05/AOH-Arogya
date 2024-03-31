@@ -71,7 +71,7 @@ const About = () => {
             patients in emergency situations.
           </p>
 
-          <button className=" text-xl font-semibold md:text-center bg-blue-900 text-white h-10 w-60 md:ml-8  ml-6">
+          <button className=" text-xl font-semibold md:text-center bg-blue-900 text-white h-10 w-60 md:ml-8  ml-10">
             {" "}
             Learn More{" "}
           </button>
@@ -90,7 +90,7 @@ const About = () => {
             assistance and emergency, medical transfer.
           </p>
 
-          <button className=" text-xl font-semibold md:text-center bg-blue-900 text-white h-10 w-60 md:ml-8 ml-6">
+          <button className=" text-xl font-semibold md:text-center bg-blue-900 text-white h-10 w-60 md:ml-8 ml-10">
             {" "}
             Learn More{" "}
           </button>
@@ -110,7 +110,7 @@ const About = () => {
             professionals in a safe and anonymous space.
           </p>
 
-          <button className=" text-xl font-semibold md:text-center bg-blue-900 text-white h-10 w-60 md:ml-8 ml-6">
+          <button className=" text-xl font-semibold md:text-center bg-blue-900 text-white h-10 w-60 md:ml-8 ml-10">
             {" "}
             Learn More{" "}
           </button>
@@ -127,7 +127,7 @@ const About = () => {
             overall well-being and Healthy life .
           </p>
 
-          <button className=" text-xl font-semibold md:text-center bg-blue-900 text-white h-10 w-60 md:ml-8 ml-6">
+          <button className=" text-xl font-semibold md:text-center bg-blue-900 text-white h-10 w-60 md:ml-8 ml-10">
             {" "}
             Learn More{" "}
           </button>
@@ -146,118 +146,121 @@ const About = () => {
             effectively and enhancing their overall well-being and healthy life.
           </p>
 
-          <button className=" text-xl font-semibold md:text-center bg-blue-900 text-white h-10 w-60 md:ml-8 md:mt-12  ml-6">
+          <button className=" text-xl font-semibold md:text-center bg-blue-900 text-white h-10 w-60 md:ml-8 md:mt-12  ml-10">
             {" "}
             Learn More{" "}
           </button>
         </div>
       </div>
+    
       <div>
-        <div className="  md:mt-32">
-          <p className="mt-40 md:ml-[500px]  text-6xl font-bold">
-            {" "}
-            Why Choose Us
-          </p>
+  <div className="hidden md:block md:mt-32">
+    <p className="mt-40 md:ml-[500px] text-4xl font-bold ">
+      {" "}
+      Why Choose Us
+    </p>
 
-          <img
-            className=" h-[620px] w-[470px]  rounded-xl   -mt-[50px] -md:mt-[150px] "
-            src={WhyImg}
-            alt="Description of the image"
-          />
+    <img
+      className="h-[620px] w-[470px] rounded-xl -mt-[50px] -md:mt-[150px]"
+      src={WhyImg}
+      alt="Description of the image"
+    />
 
-          <div className=" grid  md:grid-cols-2  -md:mt-[30px] -mt-7  grid-cols-1  md:gap-4 gap-6 ">
-            <div className=" h-[260px] w-[330px] -mt-[500px] ml-[500px]  ">
-              <img
-                className=" bg-blue-800 h-12 w-12 rounded-full px-3 md:mt-2 md:ml-2"
-                src={professional1}
-              ></img>
+    <div className="grid md:grid-cols-2 -md:mt-[30px] -mt-7 grid-cols-1 md:gap-4 gap-6">
+      <div className="h-[260px] w-[330px] -mt-[500px] ml-[500px] ">
+        <img
+          className="bg-blue-800 h-12 w-12 rounded-full px-3 md:mt-2 md:ml-2"
+          src={professional1}
+        ></img>
 
-              <p className=" text-2xl font-semibold md:ml-2 md:mt-2">
-                Experienced Medical Professionals
-              </p>
-              <p className=" md:ml-2 md:mt-4">
-                Our team includes experienced doctors, nurses, and other
-                healthcare professionals who are dedicated to providing the best
-                possible care to our patients.
-              </p>
-            </div>
+        <p className="text-2xl font-semibold md:ml-2 md:mt-2">
+          Experienced Medical Professionals
+        </p>
+        <p className="md:ml-2 md:mt-4">
+          Our team includes experienced doctors, nurses, and other healthcare
+          professionals who are dedicated to providing the best possible care
+          to our patients.
+        </p>
+      </div>
 
-            <div className=" h-[260px] w-[330px] -mt-[500px] ml-[250px]  ">
-              <img
-                className=" bg-blue-800 h-12 w-12 rounded-full px-3 md:mt-2 md:ml-2"
-                src={professional2}
-              ></img>
+      <div className="h-[260px] w-[330px] -mt-[500px] ml-[250px] ">
+        <img
+          className="bg-blue-800 h-12 w-12 rounded-full px-3 md:mt-2 md:ml-2"
+          src={professional2}
+        ></img>
 
-              <p className=" text-2xl font-semibold md:ml-2 md:mt-2">
-                Comprehensive Services
-              </p>
-              <p className=" md:ml-2 md:mt-4">
-                We offer a wide range of healthcare services, from preventive
-                care to specialized treatment for complex conditions.
-              </p>
-            </div>
+        <p className="text-2xl font-semibold md:ml-2 md:mt-2">
+          Comprehensive Services
+        </p>
+        <p className="md:ml-2 md:mt-4">
+          We offer a wide range of healthcare services, from preventive care
+          to specialized treatment for complex conditions.
+        </p>
+      </div>
 
-            <div className=" h-[260px] w-[330px] -mt-[252px] ml-[500px]  ">
-              <img
-                className=" bg-blue-800 h-12 w-12 rounded-full px-3 md:mt-2 md:ml-2"
-                src={professional3}
-              ></img>
+      <div className="h-[260px] w-[330px] -mt-[252px] ml-[500px] ">
+        <img
+          className="bg-blue-800 h-12 w-12 rounded-full px-3 md:mt-2 md:ml-2"
+          src={professional3}
+        ></img>
 
-              <p className=" text-2xl font-semibold md:ml-2 md:mt-2">
-                Patient-centered Approach
-              </p>
-              <p className=" md:ml-2 md:mt-4">
-                We believe in treating each patient as an individual, and we
-                take the time to understand your unique health needs and
-                concerns.
-              </p>
-            </div>
+        <p className="text-2xl font-semibold md:ml-2 md:mt-2">
+          Patient-centered Approach
+        </p>
+        <p className="md:ml-2 md:mt-4">
+          We believe in treating each patient as an individual, and we take
+          the time to understand your unique health needs and concerns.
+        </p>
+      </div>
 
-            <div className=" h-[260px] w-[330px] -mt-[252px] ml-[250px]  ">
-              <img
-                className=" bg-blue-800 h-12 w-12 rounded-full px-3 md:mt-2 md:ml-2"
-                src={professional4}
-              ></img>
+      <div className="h-[260px] w-[330px] -mt-[252px] ml-[250px] ">
+        <img
+          className="bg-blue-800 h-12 w-12 rounded-full px-3 md:mt-2 md:ml-2"
+          src={professional4}
+        ></img>
 
-              <p className=" text-2xl font-semibold md:ml-2 md:mt-2">
-                State-of-the-art Facilities
-              </p>
-              <p className=" md:ml-2 md:mt-4">
-                Our healthcare center is equipped with the latest technology and
-                equipment to provide our patients with the most advanced care
-                possible.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className=" md:mt-20 border h-64  w-full  rounded-2xl bg-blue-300  shadow-lg  shadow-blue-400">
-          <div className=" grid md:grid-cols-5  grid-cols-2  md:gap-6 gap-4 md:text-center md:mt-16 text-6xl  font-bold">
-            <p>20+</p>
-            <p>95%</p>
-            <p>5000+</p>
-            <p>10+</p>
-            <p>22+</p>
-          </div>
+        <p className="text-2xl font-semibold md:ml-2 md:mt-2">
+          State-of-the-art Facilities
+        </p>
+        <p className="md:ml-2 md:mt-4">
+          Our healthcare center is equipped with the latest technology and
+          equipment to provide our patients with the most advanced care
+          possible.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-          <div className=" grid md:grid-cols-5 grid-cols-2 gap-4 md:gap-6 md:text-center text-center text-lg font-normal  md:ml-4 md:mr-4">
-            <p> Years of Experience</p>
-            <p> Patient Satisfaction rating</p>
-            <p> Patients saved annually</p>
-            <p> Healthcare providers on staff</p>
-            <p> Convenient locations in the area</p>
-          </div>
-        </div>
-      </div>{" "}
+
+<div className="md:mt-20 hidden md:block border md:h-64 h-72 md:w-full w-full rounded-2xl bg-blue-300 shadow-lg shadow-blue-400">
+  <div className="grid md:grid-cols-5 grid-cols-1 md:gap-6 gap-4 md:text-center md:mt-16 ml-4 md:text-6xl text-xl font-bold">
+    <div>20+</div>
+    <div>95%</div>
+    <div>5000+</div>
+    <div>10+</div>
+    <div>22+</div>
+  </div>
+
+  <div className="grid  md:grid-cols-5 grid-cols-1 mt-2 gap-4 md:gap-6 md:text-center text-right text-xl font-normal md:ml-4 md:mr-4">
+    <div>Years of Experience</div>
+    <div>Patient Satisfaction rating</div>
+    <div>Patients saved annually</div>
+    <div>Healthcare providers on staff</div>
+    <div>Convenient locations in the area</div>
+  </div>
+</div>
+
       <div>
-        <div className="md:mt-24 text-center">
+        <div className="md:mt-24 mt-20  text-center">
           <p className="font-semibold text-3xl text-blue-600"> Meet Our</p>
           <p className="font-bold text-5xl">Experts Doctors</p>
 
-          <div className="grid md:grid-cols-3 md:gap-2 md:ml-10">
-            <div className="border md:h-[400px] md:w-80 h-52 w-[260px] mt-16 shadow-md shadow-blue-200 rounded-xl  hover:mt-4 transition-all duration-300 ease-in-out">
+          <div className="grid md:grid-cols-3 grid-cols-1  gap-y-5 md:gap-2 md:ml-10">
+            <div className="border sm:w-[300px] py-10 md:mt-20 sm:h-fit md:h-[450px] md:w-80 mt-16 shadow-md shadow-blue-200 rounded-xl  hover:mt-4 transition-all duration-300 ease-in-out">
               <div>
                 <img
-                  className="h-40 w-40 ml-20 mt-2"
+                  className="h-40 w-40 mx-auto mt-2"
                   src={doct1}
                   alt="Doctor 1"
                 ></img>
@@ -279,10 +282,10 @@ const About = () => {
               </div>
             </div>
 
-            <div className="border md:h-[400px] md:w-80 h-52 w-[260px] mt-16 shadow-md shadow-blue-200 rounded-xl  hover:mt-4 transition-all duration-300 ease-in-out">
+            <div className="border sm:w-fit py-10 md:mt-20 sm:h-fit md:h-[450px] md:w-80 shadow-md shadow-blue-200 rounded-xl  hover:mt-4 transition-all duration-300 ease-in-out">
               <div>
                 <img
-                  className="h-40 w-40 ml-20 mt-2"
+                  className="h-40 w-40 mx-auto mt-2"
                   src={doct2}
                   alt="Doctor 1"
                 ></img>
@@ -304,10 +307,10 @@ const About = () => {
               </div>
             </div>
 
-            <div className="border md:h-[400px] md:w-80 h-52 w-[260px] mt-16 shadow-md shadow-blue-200 rounded-xl hover:mt-4 transition-all duration-300 ease-in-out">
+            <div className="border sm:w-fit py-10 md:mt-20 sm:h-fit md:h-[450px] md:w-80  shadow-md shadow-blue-200 rounded-xl hover:mt-4 transition-all duration-300 ease-in-out">
               <div>
                 <img
-                  className="h-40 w-40 ml-20 mt-2"
+                  className="h-40 w-40 mx-auto mt-2"
                   src={doct3}
                   alt="Doctor 1"
                 ></img>
@@ -332,10 +335,10 @@ const About = () => {
         </div>
 
         <div>
-          <p className=" text-3xl font-semibold text-blue-600 md:mt-32 text-center">
+          <p className=" text-3xl font-semibold text-blue-600 md:mt-32 mt-20  text-center">
             HAVE A LOOK AT
           </p>
-          <p className=" text-5xl font-bold text-center">
+          <p className=" text-5xl font-bold text-center mb-20">
             {" "}
             Our Facilities and Latest Activities
           </p>
@@ -403,17 +406,17 @@ const About = () => {
           </p>
 
           <div className=" grid md:grid-cols-2  grid-cols-1 gap-2 ml-6 -mt-12 ">
-            <div className=" border h-28 w-[500px] mt-24 shadow-lg shadow-blue-200 rounded-xl">
+            <div className=" border h-28 w-[90%] md:w-[500px] text-center mt-24 shadow-lg shadow-blue-200 rounded-xl">
               <img
                 className=" bg-blue-800 h-20 w-20 mt-[15px] ml-4 rounded-xl px-4 py-4 "
                 src={professional1}
               ></img>
-              <p className=" ml-28 -mt-14 text-xl font-semibold text-start">
+              <p className=" ml-28 -mt-20 md:-mt-14 text-xl font-semibold text-start">
                 Malcolm Baldrige National Quality Award
               </p>
             </div>
 
-            <div className=" border h-28 w-[500px] mt-24 shadow-lg shadow-blue-200 rounded-xl">
+            <div className=" border h-28 w-[90%] md:w-[500px] md:mt-24 shadow-lg shadow-blue-200 rounded-xl">
               <img
                 className=" bg-blue-800 h-20 w-20 mt-[15px] ml-4 rounded-xl px-4 py-4 "
                 src={professional1}
@@ -423,22 +426,22 @@ const About = () => {
               </p>
             </div>
 
-            <div className=" border h-28 w-[500px] mt-4 shadow-lg shadow-blue-200 rounded-xl">
+            <div className=" border h-28 md:w-[500px] w-[90%] mt-4 shadow-lg shadow-blue-200 rounded-xl">
               <img
                 className=" bg-blue-800 h-20 w-20 mt-[15px] ml-4 rounded-xl px-4 py-4 "
                 src={professional1}
               ></img>
-              <p className=" ml-28 -mt-14 text-xl font-semibold text-start">
+              <p className=" ml-28 -mt-20 md:-mt-14 text-xl font-semibold text-start">
                 Healthgrades National’s Best Hospital
               </p>
             </div>
 
-            <div className=" border h-28 w-[500px] mt-4 shadow-lg shadow-blue-200 rounded-xl">
+            <div className=" border h-28 w-[90%] md:w-[500px]  mt-4 shadow-lg shadow-blue-200 rounded-xl">
               <img
                 className=" bg-blue-800 h-20 w-20 mt-[15px] ml-4 rounded-xl px-4 py-4 "
                 src={professional1}
               ></img>
-              <p className=" ml-28 -mt-14 text-xl font-semibold text-start">
+              <p className=" ml-28 -mt-20 md:-mt-14 text-xl font-semibold text-start">
                 Joint Commission Gold Seal of Approval
               </p>
             </div>
