@@ -87,7 +87,7 @@ const Prescription = () => {
     return (
       <div className="mt-24 flex flex-col items-center justify-center">
         <input type="text"  placeholder="Enter Your Patient Mobile Number..." className= " p-2 border h-12 w-72 text-black rounded-md " value={arogya} onChange={(e)=>setarogya(e.target.value)}/>
-        <div className="text-sm leading-6 mt-8">
+        <div className="text-sm flex flex-col flex-wrap leading-6 mt-8">
           <label htmlFor="Hypertension" className="font-bold text-gray-900 text-center text-4xl mt-8">
             Upload The Prescription
           </label>
@@ -115,8 +115,8 @@ const Prescription = () => {
       <hr className=" h-2 w-96"/>
       </div>
       
-     <textarea placeholder="Enter the Prescription..." value={prescrip} onChange={(e)=>setPrescrip(e.target.value)} className=" h-64  w-96 border p-3 border-black mt-10 " >
-     </textarea>
+     <textarea placeholder="Enter the Prescription..." value={prescrip} onChange={(e)=>setPrescrip(e.target.value)} className=" h-64  w-[90%] border p-3 border-black mt-10 " >
+
      <button className=" border h-12 w-32 rounded-lg  bg-blue-900 text-white font-semibold text-lg mt-4 " onClick={writePrescription}> Submit</button>
       
       

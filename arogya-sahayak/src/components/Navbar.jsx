@@ -279,6 +279,16 @@ const Navbar = () => {
                     Home
                   </li>
                 </Link>
+                <Link to={"/profile"}>
+                  <li
+                    className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-200 px-4 py-2"
+                    onClick={() => setIsMenu(false)}
+                  >
+                    Profile
+                    
+                  </li>
+
+                </Link>
 
                 <Link to={"/about"}>
                   <li
@@ -340,7 +350,26 @@ const Navbar = () => {
                   </li>
 
                 </Link>
+                <Link to={"/prescription"}>
+                  <li
+                    className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-200 px-4 py-2"
+                    onClick={() => setIsMenu(false)}
+                  >
+                    Prescription
+                    
+                  </li>
 
+                </Link>
+                <Link to={"/register"}>
+                  <li
+                    className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-200 px-4 py-2"
+                    onClick={() => setIsMenu(false)}
+                  >
+                    Registration
+                    
+                  </li>
+
+                </Link>
 
               </ul>
 
