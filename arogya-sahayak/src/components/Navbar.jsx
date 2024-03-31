@@ -360,7 +360,7 @@ const Navbar = () => {
                   </li>
 
                 </Link>
-                <Link to={"/registration"}>
+                <Link to={"/register"}>
                   <li
                     className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-200 px-4 py-2"
                     onClick={() => setIsMenu(false)}

@@ -68,7 +68,7 @@ const SearchPatient = () => {
       <div className="mt-20 flex flex-col items-center  justify-center ">
         <input
           type="text"
-          className=" border h-12 w-96 px-3 rounded-lg border-gray-600 text-gray-900 shadow-md shadow-blue-200"
+          className=" border h-12 w-[90%] px-3 rounded-lg border-gray-600 text-gray-900 shadow-md shadow-blue-200"
           placeholder="Enter Your Arogya Number..."
           value={agrogyaNumber}
           onChange={(e) => setagrogyaNumber(e.target.value)}
